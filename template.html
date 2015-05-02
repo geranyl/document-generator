@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$>
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$">
+    $endfor$
+    $if(date-meta)$
+    <meta name="dcterms.date" content="$date-meta$">
+    $endif$
+    <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    $if(quotes)$
+    <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+    $endif$
+    $if(highlighting-css)$
+    <style type="text/css">
+        $highlighting-css$
+    </style>
+    $endif$
+    $for(css)$
+    <link rel="stylesheet" href="$css$">
+    $endfor$
+    $if(math)$
+    $math$
+    $endif$
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+<div class="wrap">
+<div class="container doc-main-container">
+
+    <div class="col-sm-3">
+       <div class="doc-sidebar"> __mastertable</div>
+    </div>
+    <div class="col-sm-9">
+$for(include-before)$
+$include-before$
+$endfor$
+
+$if(toc)$
+<span class="lead">Table of Contents</span>
+<nav id="$idprefix$TOC" class="doc-toc">
+    $toc$
+</nav>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+
+
+
+
+$if(contents)$
+    $contents$
+$endif$
+</div>
+
+</div>
+<div class="push"></div>
+</div>
+<footer>
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-inner">
+                $if(title)$
+                    Title: $title$<br/>
+                    $for(author)$
+                        Author(s): $author$<br/>
+                    $endfor$
+                    $if(date)$
+                        Date: $date$<br/>
+                    $endif$
+                    $if(subtitle)$
+                        Desc: $subtitle$
+                    $endif$
+                $endif$
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+
+
+
+</html>
